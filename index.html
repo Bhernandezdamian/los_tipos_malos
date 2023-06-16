@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> LOS TIPOS MALOS 2022 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div id="banner" class="banner">
+      <div id="message">Espera 10 segundos para ver la película...</div>
+      <div id="countdown">10</div>
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'e57d1d26b4749765051206be9479426b',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+        document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/e57d1d26b4749765051206be9479426b/invoke.js"></scr' + 'ipt>');
+      </script>
+    </div>
+
+    <div id="videoContainer" class="video-container">
+      <video id="video" controls autoplay>
+        <source src="https://ia801500.us.archive.org/0/items/los-tipos-malos_202210/Los%20Tipos%20Malos.mp4							
+        " type="video/mp4">
+      </video>
+      <button id="fullscreenButton">Ver en pantalla completa</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var countdown = 10;
+
+    function updateCountdown() {
+      document.getElementById("countdown").textContent = countdown;
+      countdown--;
+
+      if (countdown < 0) {
+        document.getElementById("banner").style.display = "none";
+        var videoContainer = document.getElementById("videoContainer");
+        videoContainer.style.display = "block";
+
+        var fullscreenButton = document.getElementById("fullscreenButton");
+        fullscreenButton.addEventListener("click", function() {
+          var video = document.getElementById("video");
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+        });
+      } else {
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+
+    updateCountdown();
+
+
+    function changeBackgroundColor() {
+        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Array de colores
+        var body = document.querySelector('body'); // Elemento <body>
+        var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Obtener un color aleatorio
+        body.style.backgroundColor = randomColor; // Cambiar el color de fondo del <body>
+      }
+      
+      setInterval(changeBackgroundColor, 1000); // Cambiar el color cada segundo (1000 milisegundos)
+
+      
+      
+  </script>
+</body>
+</html>
